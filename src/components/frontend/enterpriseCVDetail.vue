@@ -84,8 +84,8 @@
             <h2>Lorem ipsum dolor sit.</h2>
             <div class="dotted-line"></div>
             <div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequuntur culpa cum doloremque doloribus excepturi, explicabo illo magnam minus, porro quisquam quo unde? Iusto laborum possimus qui. Earum, enim esse eum exercitationem harum nam nesciunt repellendus tempore vero voluptates.</p>
-
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequuntur culpa cum doloremque doloribus excepturi, explicabo illo magnam minus,
+                porro quisquam quo unde? Iusto laborum possimus qui. Earum, enim esse eum exercitationem harum nam nesciunt repellendus tempore vero voluptates.</p>
             </div>
           </div>
         </div>
@@ -95,9 +95,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'enterpriseCVDetail'
-  }
+export default {
+  name: 'enterpriseCVDetail'
+}
 </script>
 
 <style scoped>

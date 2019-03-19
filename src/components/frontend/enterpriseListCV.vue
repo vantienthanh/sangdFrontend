@@ -39,9 +39,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'enterpriseListCV'
-  }
+export default {
+  name: 'enterpriseListCV'
+}
 </script>
 
 <style scoped>
