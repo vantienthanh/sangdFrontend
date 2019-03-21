@@ -4,3 +4,35 @@
  p {
    margin-bottom: 0 !important;
  }
+ .navbar {
+   height: 50px;
+ }
+.header__right {
+  .login:hover {
+    .header__logout-panel {
+      display: block;
+    }
+  }
+  .header_avatar{
+    width:50px;
+  }
+  .header__name{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: gray;
+  }
+  .header__name{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: gray;
+  }
+  .header__logout-panel {
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    background-color: #f8f9fa;
+    display: none;
+  }
+}
