@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import NProgress from 'nprogress'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -43,3 +44,29 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  const tokenLocal = window.localStorage.getItem('token')
+  if (to.meta.isLogin) {
+    if (tokenLocal) {
+      next({ name: 'home' })
+      NProgress.done()
+    } else {
+      next()
+    }
+  } else if (to.meta.permission) {
+    if (tokenLocal) {
+      next()
+    } else {
+      next({ name: 'home' })
+      NProgress.done()
+    }
+  } else {
+    next()
+  }
+})
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  NProgress.done()
+})
+export default router

@@ -31,22 +31,26 @@
               </li>
             </ul>
             <div class="form-inline my-2 my-lg-0 header__right">
-              <div class="d-flex justify-content-between login" v-if="isLogin === true">
-                <div>
-                  <p class="header__name mt-1">thanhvt</p>
-                  <p class="header__name float-right">member</p>
-                </div>
-                <div class="ml-2">
-                  <img src="@/assets/img/avatar.png" id="avatar" class="header_avatar">
-                </div>
-                <div class="header__logout-panel">
-                  <button class="btn">View profile</button>
-                  <button class="btn" @click="logout">Sign out</button>
+              <div v-show="loginStatus">
+                <div class="d-flex justify-content-between login" >
+                  <div>
+                    <p class="header__name mt-1">thanhvt</p>
+                    <p class="header__name float-right">member</p>
+                  </div>
+                  <div class="ml-2">
+                    <img src="@/assets/img/avatar.png" id="avatar" class="header_avatar">
+                  </div>
+                  <div class="header__logout-panel">
+                    <button class="btn">View profile</button>
+                    <button class="btn" @click="logout">Sign out</button>
+                  </div>
                 </div>
               </div>
-              <div class="d-flex justify-content-between" v-else>
-                <router-link :to="{name:'login'}" class="btn">Đăng nhập</router-link>
-                <router-link :to="{name:'register'}" class="btn">Đăng ký</router-link>
+              <div v-show="!loginStatus">
+                <div class="d-flex justify-content-between" >
+                  <router-link :to="{name:'login'}" class="btn">Đăng nhập</router-link>
+                  <router-link :to="{name:'register'}" class="btn">Đăng ký</router-link>
+                </div>
               </div>
             </div>
           </div>
@@ -61,16 +65,17 @@ export default {
   name: 'header',
   data: function () {
     return {
-      isLogin: true
+    }
+  },
+  computed: {
+    loginStatus: function () {
+      return this.$store.getters.loginStatus
     }
   },
   methods: {
     logout: function () {
-      if (window.localStorage.getItem('token')) {
-        window.localStorage.removeItem('token')
-      }
+      this.$store.dispatch('logout')
       this.$router.push({ 'name': 'home' })
-      this.isLogin = false
     }
   }
 }

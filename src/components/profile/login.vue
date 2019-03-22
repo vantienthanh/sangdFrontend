@@ -36,7 +36,6 @@ export default {
     submit: function () {
       this.$store.dispatch('login', this.loginForm)
         .then(() => {
-          console.log(this.$store.getters.loginResponse)
         })
         .catch(err => console.log(err))
     }

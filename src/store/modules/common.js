@@ -2,11 +2,13 @@ import * as types from '../mutation-types'
 import http from '../../utils/http.js'
 
 const state = {
-  loginResponse: {}
+  loginResponse: {},
+  loginStatus: !!localStorage.getItem('token')
 }
 
 const getters = {
-  loginResponse: state => state.loginResponse
+  loginResponse: state => state.loginResponse,
+  loginStatus: state => state.loginStatus
 }
 
 const actions = {
@@ -17,6 +19,7 @@ const actions = {
         .then((response) => {
           localStorage.setItem('token', response.data.data.token)
           localStorage.setItem('user', response.data.data.user)
+          commit(types.LOGIN_STATUS, true)
           commit(types.LOGIN, response.data)
           resolve(response)
         })
@@ -24,12 +27,21 @@ const actions = {
           reject(err)
         })
     })
+  },
+  logout ({ commit }) {
+    if (window.localStorage.getItem('token')) {
+      window.localStorage.removeItem('token')
+    }
+    commit(types.LOGIN_STATUS, false)
   }
 }
 
 const mutations = {
   [types.LOGIN] (state, data) {
     state.loginResponse = data
+  },
+  [types.LOGIN_STATUS] (state, data) {
+    state.loginStatus = data
   }
 }
 

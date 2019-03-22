@@ -5,13 +5,13 @@
         <div class="form-group row">
           <label class="col-sm-4 col-form-label">Tên đăng nhập</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" placeholder="UserName">
+            <input v-model="registerFrom.username" type="text" class="form-control" placeholder="UserName">
           </div>
         </div>
         <div class="form-group row">
           <label class="col-sm-4 col-form-label">Mật khẩu</label>
           <div class="col-sm-8">
-            <input type="password" class="form-control" placeholder="Password">
+            <input v-model="registerFrom.password" type="password" class="form-control" placeholder="Password">
           </div>
         </div>
         <div class="form-group row">
@@ -24,11 +24,11 @@
           <label class="col-sm-4 col-form-label">Lựa chọn loại tài khoản</label>
           <div class="col-sm-8">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label" for="inlineRadio1">Người tìm việc</label>
+              <input v-model="registerFrom.role" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="member" checked="">
+              <label class="form-check-label active" for="inlineRadio1">Người tìm việc</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <input v-model="registerFrom.role" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="enterprise">
               <label class="form-check-label" for="inlineRadio2">Nhà tuyển dụng</label>
             </div>
           </div>
@@ -46,7 +46,16 @@
 
 <script>
 export default {
-  name: 'register'
+  name: 'register',
+  data: function () {
+    return {
+      registerFrom: {
+        username: '',
+        password: '',
+        role: ''
+      }
+    }
+  }
 }
 </script>
 
