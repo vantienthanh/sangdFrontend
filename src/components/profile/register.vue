@@ -35,7 +35,7 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-12 text-center">
-            <button class="btn btn-success mr-2">Hoàn tất đăng ký</button>
+            <button @click="submit" class="btn btn-success mr-2">Hoàn tất đăng ký</button>
             <button class="btn btn-success ml-2">Nhập lại</button>
           </div>
         </div>
@@ -53,7 +53,19 @@ export default {
         username: '',
         password: '',
         role: ''
-      }
+      },
+      error: ''
+    }
+  },
+  methods: {
+    submit: function () {
+      this.$store.dispatch('register', this.registerFrom)
+        .then(() => {
+          this.$router.push({ 'name': 'home' })
+        })
+        .catch(err => {
+          this.error = err
+        })
     }
   }
 }

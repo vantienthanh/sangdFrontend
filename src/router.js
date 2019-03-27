@@ -25,11 +25,13 @@ let router = new Router({
     {
       path: '/register',
       name: 'register',
+      meta: { isLogin: true },
       component: () => import('./components/profile/register.vue')
     },
     {
       path: '/login',
       name: 'login',
+      meta: { isLogin: true },
       component: () => import('./components/profile/login.vue')
     },
     {

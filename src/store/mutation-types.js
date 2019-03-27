@@ -1,2 +1,3 @@
 export const LOGIN = 'LOGIN'
 export const LOGIN_STATUS = 'LOGIN_STATUS'
+export const ENTERPRISE_GET_LIST_CV = 'ENTERPRISE_GET_LIST_CV'

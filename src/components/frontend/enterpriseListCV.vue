@@ -2,17 +2,17 @@
   <div class="container frontEnterpriseListCV">
     <div class="row">
       <div class="col-12">
-        <div class="row list">
+        <div v-for="item in list" class="row list">
           <div class="col-1">
             <img src="@/assets/img/noimageavailable.png" alt="">
           </div>
           <div class="col-7">
             <div class="row">
               <div class="col-8">
-                <h6 class="mb-0 mt-1">Lorem ipsum dolor sit amet.</h6>
+                <h6 class="mb-0 mt-1">{{item.title}}</h6>
               </div>
               <div class="col-2 ">
-                <span class="date d-block text-center">21/2/2019</span>
+                <span class="date d-block text-center">{{item.created_at}}</span>
               </div>
               <div class="col-2 d-flex">
                 <i class="fas fa-map-marker-alt mt-2 mr-1"></i>
@@ -40,7 +40,29 @@
 
 <script>
 export default {
-  name: 'enterpriseListCV'
+  name: 'enterpriseListCV',
+  data: function () {
+    return {
+      list: {}
+    }
+  },
+  mounted () {
+    this.$store.dispatch('a_enterprise_getListCV')
+      .then(() => {
+        this.list = this.getList
+        console.log(this.list)
+      }).catch(err => console.log(err))
+  },
+  methods: {
+
+  },
+  computed: {
+    getList: {
+      get: function () {
+        return this.$store.getters.enterprise_getListCV.data
+      }
+    }
+  }
 }
 </script>
 

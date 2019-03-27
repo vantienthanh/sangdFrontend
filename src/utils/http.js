@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosCus = axios.create({
-  baseURL: 'http://vantienthanh.local/api/'
+  baseURL: 'http://sangd.local/index.php/api'
 })
 
 export default {

@@ -34,8 +34,8 @@
               <div v-show="loginStatus">
                 <div class="d-flex justify-content-between login" >
                   <div>
-                    <p class="header__name mt-1">thanhvt</p>
-                    <p class="header__name float-right">member</p>
+                    <p class="header__name mt-1">{{user.username}}</p>
+                    <p class="header__name float-right">{{user.role}}</p>
                   </div>
                   <div class="ml-2">
                     <img src="@/assets/img/avatar.png" id="avatar" class="header_avatar">
@@ -65,7 +65,15 @@ export default {
   name: 'header',
   data: function () {
     return {
+      user: {
+        username: '',
+        role: ''
+      }
     }
+  },
+  mounted () {
+    this.user.username = localStorage.getItem('username')
+    this.user.role = localStorage.getItem('role')
   },
   computed: {
     loginStatus: function () {

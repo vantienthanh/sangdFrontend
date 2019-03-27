@@ -36,6 +36,7 @@ export default {
     submit: function () {
       this.$store.dispatch('login', this.loginForm)
         .then(() => {
+          this.$router.push({ 'name': 'home' })
         })
         .catch(err => console.log(err))
     }
