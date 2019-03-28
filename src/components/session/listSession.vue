@@ -12,7 +12,32 @@
 
 <script>
 export default {
-  name: 'listSession'
+  name: 'listSession',
+  data: function () {
+    return {
+      listSession: {}
+    }
+  },
+  mounted () {
+    this.$store.dispatch('listSession')
+      .then(() => {
+        this.listSession = this.getListSession
+        console.log(this.listSession)
+      })
+      .catch(err => console.log(err))
+  },
+  computed: {
+    getListSession: {
+      get: function () {
+        return this.$store.getters.listSession
+      }
+    }
+  },
+  methods: {
+    viewDetail: function (id) {
+
+    }
+  }
 }
 </script>
 

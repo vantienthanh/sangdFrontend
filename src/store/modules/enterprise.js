@@ -10,19 +10,18 @@ const getters = {
 }
 
 const actions = {
-  // a_enterprise_getListCV ({ commit }) {
-  //   return new Promise(function (resolve, reject) {
-  //     let urlData = 'enterprise/job-news'
-  //     http.axiosCus.get(urlData)
-  //       .then((response) => {
-  //         commit(types.ENTERPRISE_GET_LIST_CV, response.data)
-  //         resolve(response)
-  //       })
-  //       .catch(err => {
-  //         reject(err)
-  //       })
-  //   })
-  // }
+  enterpriseApply ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = 'enterprise/join-session'
+      http.axiosCus.post(urlData, params)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  }
 }
 
 const mutations = {

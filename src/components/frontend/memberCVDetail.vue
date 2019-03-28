@@ -1,17 +1,17 @@
 <template>
-<div></div>
+  <div>{{dataDetail}}</div>
 </template>
 
 <script>
 export default {
-  name: 'sessionDetail',
+  name: 'memberCVDetail',
   data: function () {
     return {
       dataDetail: {}
     }
   },
   mounted () {
-    this.$store.dispatch('sessionDetail', this.$route.params.id)
+    this.$store.dispatch('m_DetailCV', this.$route.params.id)
       .then(() => {
         this.dataDetail = this.getDataDetail
         console.log(this.dataDetail)
@@ -21,7 +21,7 @@ export default {
   computed: {
     getDataDetail: {
       get: function () {
-        return this.$store.getters.sessionDetail
+        return this.$store.getters.m_detailCV.data
       }
     }
   }

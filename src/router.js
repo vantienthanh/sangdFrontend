@@ -43,6 +43,26 @@ let router = new Router({
       path: '/nguoi-tim-viec/:id',
       name: 'enterpriseCVDetail',
       component: () => import('./components/frontend/enterpriseCVDetail.vue')
+    },
+    {
+      path: '/viec-tim-nguoi',
+      name: 'enterpriseListCV',
+      component: () => import('./components/frontend/memberListCV')
+    },
+    {
+      path: '/viec-tim-nguoi/:id',
+      name: 'enterpriseCVDetail',
+      component: () => import('./components/frontend/memberCVDetail')
+    },
+    {
+      path: '/phien-giao-dich',
+      name: 'session',
+      component: () => import('./components/session/listSession')
+    },
+    {
+      path: '/phien-giao-dich/:id',
+      name: 'sessionDetail',
+      component: () => import('./components/session/sessionDetail')
     }
   ]
 })

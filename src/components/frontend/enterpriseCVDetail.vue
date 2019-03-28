@@ -96,7 +96,27 @@
 
 <script>
 export default {
-  name: 'enterpriseCVDetail'
+  name: 'enterpriseCVDetail',
+  data: function () {
+    return {
+      dataDetail: {}
+    }
+  },
+  mounted () {
+    this.$store.dispatch('e_DetailCV', this.$route.params.id)
+      .then(() => {
+        this.dataDetail = this.getDataDetail
+        console.log(this.dataDetail)
+      })
+      .catch(err => console.log(err))
+  },
+  computed: {
+    getDataDetail: {
+      get: function () {
+        return this.$store.getters.e_detailCV
+      }
+    }
+  }
 }
 </script>
 
