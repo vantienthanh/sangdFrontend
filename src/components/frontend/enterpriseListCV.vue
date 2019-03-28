@@ -9,7 +9,9 @@
           <div class="col-7">
             <div class="row">
               <div class="col-8">
-                <h6 class="mb-0 mt-1">{{item.title}}</h6>
+                <router-link :to="{name:'enterpriseCVDetail', params: {id:item.id}}">
+                  <h6 class="mb-0 mt-1">{{item.title}}</h6>
+                </router-link>
               </div>
               <div class="col-2 ">
                 <span class="date d-block text-center">{{item.created_at}}</span>
@@ -47,7 +49,7 @@ export default {
     }
   },
   mounted () {
-    this.$store.dispatch('a_enterprise_getListCV')
+    this.$store.dispatch('e_getListCV')
       .then(() => {
         this.list = this.getList
         console.log(this.list)

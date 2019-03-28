@@ -35,12 +35,12 @@ let router = new Router({
       component: () => import('./components/profile/login.vue')
     },
     {
-      path: '/t1',
+      path: '/nguoi-tim-viec',
       name: 'enterpriseListCV',
       component: () => import('./components/frontend/enterpriseListCV.vue')
     },
     {
-      path: '/t1/id',
+      path: '/nguoi-tim-viec/:id',
       name: 'enterpriseCVDetail',
       component: () => import('./components/frontend/enterpriseCVDetail.vue')
     }

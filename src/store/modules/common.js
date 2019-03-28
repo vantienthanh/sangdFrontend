@@ -19,6 +19,7 @@ const actions = {
         .then((response) => {
           localStorage.setItem('token', response.data.data.token)
           localStorage.setItem('username', response.data.data.user.username)
+          localStorage.setItem('user_id', response.data.data.user.id)
           localStorage.setItem('role', response.data.data.user.role)
           commit(types.LOGIN_STATUS, true)
           commit(types.LOGIN, response.data)

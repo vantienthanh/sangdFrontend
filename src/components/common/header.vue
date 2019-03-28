@@ -13,7 +13,10 @@
                 <router-link class="nav-link" :to="{name:'home'}">Home</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" :to="{name:'enterpriseListCV'}">T1</router-link>
+                <router-link class="nav-link" :to="{name:'enterpriseListCV'}">Người tìm việc</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" :to="{name:'enterpriseListCV'}">Việc tìm người</router-link>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
