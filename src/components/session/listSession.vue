@@ -1,13 +1,49 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>title</h3>
-                <p>start time</p>
-                <p>end time</p>
-            </div>
-        </div>
+  <div class="container table_listSession">
+    <div class="row">
+      <div class="col-12">
+        <h1>Title session</h1>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <td width="8%"><img src="@/assets/img/avatar.png" alt=""></td>
+              <td>
+                <a href="">Lorem ipsum dolor sit amet.</a>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </td>
+              <td><i class="fas fa-dollar-sign"></i> 1000$</td>
+              <td><i class="far fa-clock"></i>1/1/2019</td>
+              <td><i class="fas fa-map-marker-alt"></i> Ha Noi</td>
+            </tr>
+            <tr>
+              <td width="8%"><img src="@/assets/img/avatar.png" alt=""></td>
+              <td>
+                <a href="">Lorem ipsum dolor sit amet.</a>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </td>
+              <td><i class="fas fa-dollar-sign"></i> 1000$</td>
+              <td><i class="far fa-clock"></i>1/1/2019</td>
+              <td><i class="fas fa-map-marker-alt"></i> Ha Noi</td>
+            </tr>
+            <tr>
+              <td width="8%"><img src="@/assets/img/avatar.png" alt=""></td>
+              <td>
+                <a href="">Lorem ipsum dolor sit amet.</a>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </td>
+              <td><i class="fas fa-dollar-sign"></i> 1000$</td>
+              <td><i class="far fa-clock"></i>1/1/2019</td>
+              <td><i class="fas fa-map-marker-alt"></i> Ha Noi</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
