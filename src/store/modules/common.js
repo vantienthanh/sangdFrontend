@@ -33,6 +33,8 @@ const actions = {
   logout ({ commit }) {
     if (window.localStorage.getItem('token')) {
       window.localStorage.removeItem('token')
+      window.localStorage.removeItem('user_id')
+      window.localStorage.removeItem('role')
     }
     commit(types.LOGIN_STATUS, false)
   },

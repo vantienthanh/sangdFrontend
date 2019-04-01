@@ -18,6 +18,9 @@
               <li class="nav-item">
                 <router-link class="nav-link" :to="{name:'enterpriseListCV'}">Việc tìm người</router-link>
               </li>
+              <li class="nav-item">
+                <router-link class="nav-link" :to="{name:'session'}">Sàn giao dịch</router-link>
+              </li>
             </ul>
             <div class="form-inline my-2 my-lg-0 header__right">
               <div v-show="loginStatus">

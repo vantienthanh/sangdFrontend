@@ -3,12 +3,14 @@ import http from '../../utils/http.js'
 
 const state = {
   listSession: {},
-  sessionDetail: {}
+  sessionDetail: {},
+  sessionInfo: {}
 }
 
 const getters = {
   listSession: state => state.listSession,
-  sessionDetail: state => state.sessionDetail
+  sessionDetail: state => state.sessionDetail,
+  sessionInfo: state => state.sessionInfo
 }
 
 const actions = {
@@ -25,9 +27,22 @@ const actions = {
         })
     })
   },
-  sessionDetail ({ commit }, id) {
+  sessionInfo ({ commit }, id) {
     return new Promise(function (resolve, reject) {
       let urlData = 'session/detail/' + id
+      http.axiosCus.get(urlData)
+        .then((response) => {
+          commit(types.SESSION_INFO, response.data)
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
+  sessionDetail ({ commit }, id) {
+    return new Promise(function (resolve, reject) {
+      let urlData = 'session/detail/' + id + '/enterprise'
       http.axiosCus.get(urlData)
         .then((response) => {
           commit(types.SESSION_DETAIL, response.data)
@@ -70,6 +85,9 @@ const mutations = {
   },
   [types.SESSION_DETAIL] (state, data) {
     state.sessionDetail = data
+  },
+  [types.SESSION_INFO] (state, data) {
+    state.sessionInfo = data
   }
 }
 

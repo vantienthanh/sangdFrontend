@@ -46,12 +46,12 @@ let router = new Router({
     },
     {
       path: '/viec-tim-nguoi',
-      name: 'enterpriseListCV',
+      name: 'memberListCV',
       component: () => import('./components/frontend/memberListCV')
     },
     {
       path: '/viec-tim-nguoi/:id',
-      name: 'enterpriseCVDetail',
+      name: 'memberCVDetail',
       component: () => import('./components/frontend/memberCVDetail')
     },
     {
