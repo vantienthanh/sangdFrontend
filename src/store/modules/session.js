@@ -27,10 +27,10 @@ const actions = {
         })
     })
   },
-  sessionInfo ({ commit }, id) {
+  sessionInfo ({ commit }, params) {
     return new Promise(function (resolve, reject) {
-      let urlData = 'session/detail/' + id
-      http.axiosCus.get(urlData)
+      let urlData = 'session/detail/'
+      http.axiosCus.post(urlData, params)
         .then((response) => {
           commit(types.SESSION_INFO, response.data)
           resolve(response)

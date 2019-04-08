@@ -3,10 +3,12 @@ import http from '../../utils/http.js'
 
 const state = {
   // enterprise_getListCV: {}
+  userInfo: {}
 }
 
 const getters = {
   // enterprise_getListCV: state => state.enterprise_getListCV
+  userInfo: state => state.userInfo
 }
 
 const actions = {
@@ -21,6 +23,19 @@ const actions = {
           reject(err)
         })
     })
+  },
+  memberInfo ({ commit }, id) {
+    return new Promise(function (resolve, reject) {
+      let urlData = 'user/' + id
+      http.axiosCus.get(urlData)
+        .then((response) => {
+          commit(types.USER_INFO, response.data)
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
   }
 }
 
@@ -28,6 +43,9 @@ const mutations = {
   // [types.ENTERPRISE_GET_LIST_CV] (state, data) {
   //   state.enterprise_getListCV = data
   // }
+  [types.USER_INFO] (state, data) {
+    state.userInfo = data
+  }
 }
 
 export default {

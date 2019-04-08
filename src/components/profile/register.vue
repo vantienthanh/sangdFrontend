@@ -15,9 +15,9 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-4 col-form-label">Nhập lại mật khẩu</label>
+          <label class="col-sm-4 col-form-label">Email</label>
           <div class="col-sm-8">
-            <input type="password" class="form-control" placeholder="Re - Password">
+            <input type="email" class="form-control" placeholder="Email">
           </div>
         </div>
         <div class="form-group row">

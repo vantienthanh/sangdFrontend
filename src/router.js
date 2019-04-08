@@ -63,6 +63,11 @@ let router = new Router({
       path: '/phien-giao-dich/:id',
       name: 'sessionDetail',
       component: () => import('./components/session/sessionDetail')
+    },
+    {
+      path: '/profile',
+      name: 'memberProfile',
+      component: () => import('./components/frontend/memberProfile')
     }
   ]
 })

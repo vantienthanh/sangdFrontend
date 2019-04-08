@@ -26,7 +26,9 @@
                     <div class="col-12">
                         <div class="session-status">
                             <!--<h1>Phiên giao dịch đã kết thúc</h1>-->
-                            <a data-toggle="modal" data-target="#exampleModal" href="#">Tham gia</a>
+                            <a v-if="sessionInfo.userStatus === null" data-toggle="modal" data-target="#exampleModal" href="#">Tham gia</a>
+                            <p v-else-if="sessionInfo.userStatus === 'waitting'" href="#">Chờ xét duyệt</p>
+                            <a v-else href="#">Không thể tham gia</a>
                         </div>
                     </div>
                 </div>
@@ -85,15 +87,22 @@ export default {
     return {
       dataDetail: {},
       sessionInfo: {},
-      roleUser: ''
+      roleUser: '',
+      infoData: {
+        user_id: null,
+        id: null
+      }
     }
   },
   mounted () {
-    this.$store.dispatch('sessionInfo', this.$route.params.id)
+    this.infoData.id = this.$route.params.id
+    this.infoData.user_id = localStorage.getItem('user_id')
+    this.$store.dispatch('sessionInfo', this.infoData)
       .then(() => {
         this.sessionInfo = this.getSessionInfo
+        console.log(this.sessionInfo, 'aaa')
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err, '111'))
     this.$store.dispatch('sessionDetail', this.$route.params.id)
       .then(() => {
         this.dataDetail = this.getDataDetail

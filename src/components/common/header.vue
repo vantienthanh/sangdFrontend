@@ -33,8 +33,8 @@
                     <img src="@/assets/img/avatar.png" id="avatar" class="header_avatar">
                   </div>
                   <div class="header__logout-panel">
-                    <button class="btn">View profile</button>
-                    <button class="btn" @click="logout">Sign out</button>
+                    <router-link :to="{name:'memberProfile'}" class="btn">Tài khoản</router-link>
+                    <button class="btn" @click="logout">Đăng xuất</button>
                   </div>
                 </div>
               </div>
