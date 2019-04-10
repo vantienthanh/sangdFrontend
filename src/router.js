@@ -68,6 +68,11 @@ let router = new Router({
       path: '/profile',
       name: 'memberProfile',
       component: () => import('./components/frontend/memberProfile')
+    },
+    {
+      path: '/session/table',
+      name: 'sessionTable',
+      component: () => import('./components/session/sessionTable')
     }
   ]
 })

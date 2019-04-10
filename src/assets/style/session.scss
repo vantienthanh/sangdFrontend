@@ -62,3 +62,18 @@
     }
   }
 }
+.sessionTable {
+  .table-number {
+    background-color: #ffd922;
+    border-radius: 3px;
+    div {
+      background-color: #fff;
+      padding: 2px 5px;
+      border-radius: 3px;
+
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+}

@@ -10,6 +10,13 @@
  .navbar {
    height: 50px;
  }
+ .row-background {
+   background-color: #f8f9fa;
+   border-radius: 3px;
+ }
+ .line {
+   border-bottom: 1px solid #d2ddef;
+ }
 .header__right {
   .login:hover {
     .header__logout-panel {
