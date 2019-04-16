@@ -35,16 +35,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div v-for="item in dataDetail" :key="item.id" class="col-3">
                 <div class="item border">
                     <div class="my-2 mx-3">
                         <p>Cần tuyển</p>
-                        <a href="">
+                        <router-link :to="{name:'sessionTable', params: {id:item.id}}">
                             <div class="border text-center">
                                 <p>Lorem ipsum dolor sit.</p>
                                 <img src="@/assets/img/avatar.png" alt="">
                             </div>
-                        </a>
+                        </router-link>
                         <p>
                             <span>Ứng viên: 0</span>
                         </p>

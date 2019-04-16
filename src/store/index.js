@@ -4,6 +4,7 @@ import common from './modules/common.js'
 import frontend from './modules/frontend'
 import session from './modules/session'
 import member from './modules/member'
+import profileUser from './modules/profile'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,9 @@ const store = new Vuex.Store({
     common,
     frontend,
     session,
-    member
+    member,
+    profileUser
+    // profile
   },
   strict: debug
 })

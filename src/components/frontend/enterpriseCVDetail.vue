@@ -15,10 +15,10 @@
           <div class="col-3 right-column">
             <img src="@/assets/img/noimageavailable.png" alt="">
             <div class="content-info border">
-              <h3 class="info-header ">Lorem ipsum dolor sit.</h3>
-              <p class="text-center font-weight-bold">Lorem ipsum dolor sit.</p>
+              <h3 class="info-header ">Thông tin tuyển dụng</h3>
+              <p class="text-center font-weight-bold">Tình trạng hồ sơ</p>
               <div class="d-flex justify-content-center my-2">
-                <span class="text-center cv_status">Lorem ipsum dolor</span>
+                <span class="text-center cv_status">Được phê duyệt</span>
               </div>
               <div class="mx-3 my-2">
                 <div class="dotted-line"></div>
@@ -50,42 +50,47 @@
                 <div class="dotted-line"></div>
                 <div class="row">
                   <div class="col-6">
-                    <p>Lorem ipsum.</p>
+                    <p>Ngày tạo hồ sơ</p>
                   </div>
                   <div class="col-6">
-                    <p class="float-right color-orange">Lorem ipsum.</p>
+                    <p class="float-right color-orange">{{dataDetail.created_at}}</p>
                   </div>
                 </div>
                 <div class="dotted-line"></div>
                 <div class="row">
                   <div class="col-6">
-                    <p>Lorem ipsum.</p>
+                    <p>Hạn nộp CV</p>
                   </div>
                   <div class="col-6">
-                    <p class="float-right color-orange">Lorem ipsum.</p>
+                    <p class="float-right color-orange">{{dataDetail.endTime}}</p>
                   </div>
                 </div>
                 <div class="apply">
                   <i class="far fa-file-alt"></i>
-                  <span>Apply</span>
+                  <span>Nộp CV</span>
                 </div>
               </div>
 
             </div>
           </div>
           <div class="col-9 left-column border">
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2>{{dataDetail.title}}</h2>
             <div class="dotted-line"></div>
             <div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque error expedita id nulla quia quos!</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nesciunt!</p>
             </div>
             <div class="dotted-line"></div>
-            <h2>Lorem ipsum dolor sit.</h2>
+            <h2>Mô tả công việc</h2>
             <div class="dotted-line"></div>
             <div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequuntur culpa cum doloremque doloribus excepturi, explicabo illo magnam minus,
-                porro quisquam quo unde? Iusto laborum possimus qui. Earum, enim esse eum exercitationem harum nam nesciunt repellendus tempore vero voluptates.</p>
+              <p>{{dataDetail.description}}</p>
+            </div>
+            <div class="dotted-line"></div>
+            <h2>Chế độ đãi ngộ</h2>
+            <div class="dotted-line"></div>
+            <div>
+              <p>{{dataDetail.benefit}}</p>
             </div>
           </div>
         </div>
@@ -113,7 +118,7 @@ export default {
   computed: {
     getDataDetail: {
       get: function () {
-        return this.$store.getters.e_detailCV
+        return this.$store.getters.e_detailCV.data
       }
     }
   }

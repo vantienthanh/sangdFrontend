@@ -2,7 +2,7 @@
   <div class="container table_listSession">
     <div class="row">
       <div class="col-12">
-        <h1>Title session</h1>
+        <h1>Chào mừng bạn đến với sàn giao dịch việc làm</h1>
       </div>
     </div>
     <div class="row">

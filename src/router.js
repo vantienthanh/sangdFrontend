@@ -66,11 +66,28 @@ let router = new Router({
     },
     {
       path: '/profile',
-      name: 'memberProfile',
-      component: () => import('./components/frontend/memberProfile')
+      name: 'profile',
+      component: () => import('./components/profile/profile'),
+      children: [
+        {
+          path: '',
+          name: 'profileInfo',
+          component: () => import('./components/frontend/memberProfile')
+        },
+        {
+          path: '/cv',
+          name: 'profileCVIndex',
+          component: () => import('./components/profile/profileCVIndex')
+        },
+        {
+          path: '/cv/member',
+          name: 'profileCreateMemberCV',
+          component: () => import('./components/profile/profileCreateMemberCV')
+        }
+      ]
     },
     {
-      path: '/session/table',
+      path: '/session/table/:id',
       name: 'sessionTable',
       component: () => import('./components/session/sessionTable')
     }
