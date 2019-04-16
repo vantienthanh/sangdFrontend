@@ -21,6 +21,18 @@ const actions = {
           reject(err)
         })
     })
+  },
+  createEnterpriseCV ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/enterprise/job-news/create'
+      http.axiosCus.post(urlData, params)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
   }
 }
 
