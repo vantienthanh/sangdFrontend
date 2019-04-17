@@ -10,7 +10,8 @@
         <table class="table table-hover">
           <tbody>
           <tr v-for="item in list" :key="item.id">
-            <td width="8%"><img src="@/assets/img/avatar.png" alt=""></td>
+            <td v-if="item.avatar === null" width="8%"> <img  src="@/assets/img/noimageavailable.png" alt="" width="150px"></td>
+            <td v-else width="8%"><img  :src="item.avatar" alt=""></td>
             <td width="60%">
               <router-link :to="{name: 'sessionDetail', params: {id:item.id}}">{{item.title}}</router-link>
               <p>Lorem ipsum dolor sit amet, consectetur.</p>

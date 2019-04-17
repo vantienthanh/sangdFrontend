@@ -62,7 +62,7 @@ const actions = {
       let urlData = 'member/list-cv/' + id
       http.axiosCus.get(urlData)
         .then((response) => {
-          commit(types.M_LIST_CV, response.data)
+          commit(types.M_DETAIL_CV, response.data)
           resolve(response)
         })
         .catch(err => {

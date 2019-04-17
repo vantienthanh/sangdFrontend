@@ -15,7 +15,7 @@ const actions = {
   profile_getListMemberCVByUser ({ commit }, params) {
     return new Promise(function (resolve, reject) {
       let urlData = '/member/list-cv/find-by-id/' + params
-      http.axiosCus.get(urlData, params)
+      http.axiosCus.get(urlData)
         .then((response) => {
           commit(types.PROFILE_LIST_MEMBER_CV, response.data)
           resolve(response)

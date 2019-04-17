@@ -85,9 +85,19 @@ let router = new Router({
           component: () => import('./components/member/profileCreateMemberCV')
         },
         {
+          path: '/profile/cv/member/:id/edit',
+          name: 'profileEditMemberCV',
+          component: () => import('./components/member/profileEditMemberCV')
+        },
+        {
           path: '/profile/cv/enterprise',
           name: 'profileCreateEnterpriseCV',
           component: () => import('./components/enterprise/profileCreateEnterpriseCV')
+        },
+        {
+          path: '/profile/cv/enterprise/:id/edit',
+          name: 'profileEditEnterpriseCV',
+          component: () => import('./components/enterprise/profileEditEnterpriseCV')
         }
       ]
     },

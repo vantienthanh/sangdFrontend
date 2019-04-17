@@ -2,9 +2,10 @@
   <div class="container frontEnterpriseListCV">
     <div class="row">
       <div class="col-12">
-        <div v-for="item in list" class="row list">
+        <div v-for="item in list" :key="item.id" class="row list">
           <div class="col-1">
-            <img src="@/assets/img/noimageavailable.png" alt="">
+            <img v-if="item.avatar === null" src="@/assets/img/noimageavailable.png" alt="">
+            <img v-else :src="item.avatar" alt="">
           </div>
           <div class="col-7">
             <div class="row">

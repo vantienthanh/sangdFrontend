@@ -1,4 +1,4 @@
-import * as types from '../mutation-types'
+// import * as types from '../mutation-types'
 import http from '../../utils/http.js'
 
 const state = {
@@ -26,6 +26,30 @@ const actions = {
     return new Promise(function (resolve, reject) {
       let urlData = '/enterprise/job-news/create'
       http.axiosCus.post(urlData, params)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
+  deleteEnterpriseCV ({ commit }, id) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/enterprise/job-news/delete/' + id
+      http.axiosCus.delete(urlData)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
+  updateEnterpriseCV ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/enterprise/job-news/update/' + params.id
+      http.axiosCus.put(urlData, params.form)
         .then((response) => {
           resolve(response)
         })

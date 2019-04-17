@@ -41,12 +41,13 @@
                         <p>Cần tuyển</p>
                         <router-link :to="{name:'sessionTable', params: {id:item.id}}">
                             <div class="border text-center">
-                                <p>Lorem ipsum dolor sit.</p>
-                                <img src="@/assets/img/avatar.png" alt="">
+                                <p>{{item.enterpriseName}}</p>
+                                <img v-if="item.avatar === null" src="@/assets/img/noimageavailable.png" alt="">
+                                <img v-else :src="item.avatar" alt="">
                             </div>
                         </router-link>
                         <p>
-                            <span>Ứng viên: 0</span>
+                            <span>Ứng viên: {{item.numberUserJoin}}</span>
                         </p>
                     </div>
                 </div>

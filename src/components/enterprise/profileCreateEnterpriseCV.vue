@@ -78,6 +78,7 @@ export default {
       console.log(this.formData)
       this.$store.dispatch('createEnterpriseCV', this.formData)
         .then(() => {
+          this.$toasted.show('hello billo')
           this.$router.push({ name: 'profileCVIndex' })
         })
         .catch(err => console.log(err))

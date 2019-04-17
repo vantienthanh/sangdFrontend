@@ -36,6 +36,42 @@ const actions = {
           reject(err)
         })
     })
+  },
+  CreateMemberCV ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/member/list-cv/create'
+      http.axiosCus.post(urlData, params)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
+  deleteMemberCV ({ commit }, id) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/member/list-cv/detele/' + id
+      http.axiosCus.delete(urlData)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
+  editMemberCV ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/member/list-cv/update/' + params.id
+      http.axiosCus.put(urlData, params.form)
+        .then((response) => {
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
   }
 }
 

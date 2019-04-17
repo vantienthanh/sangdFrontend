@@ -29,8 +29,7 @@
         <p>Kinh nghiệm làm việc</p>
       </div>
       <div class="col-9">
-        <textarea v-model="formData.description" class="form-control" name="description" id="description" cols="30"
-                  rows="10"></textarea>
+        <textarea v-model="formData.description" class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
       </div>
     </div>
     <div class="row mt-3">
@@ -50,7 +49,7 @@
       <div class="col-3 text-right">
       </div>
       <div class="col-9">
-        <button class="btn btn-primary" @click="submit">Tạo mới</button>
+        <button class="btn btn-primary" @click="submit">Cập nhật</button>
       </div>
     </div>
   </div>
@@ -58,7 +57,7 @@
 
 <script>
 export default {
-  name: 'profileCreateMemberCV',
+  name: 'profileEditMemberCV',
   data: function () {
     return {
       formData: {
@@ -73,10 +72,25 @@ export default {
   },
   mounted () {
     this.formData.user_id = localStorage.getItem('user_id')
+    this.$store.dispatch('m_detailCV', this.$route.params.id)
+      .then(() => {
+        console.log(this.$store.getters.m_detailCV.data)
+        let dataRes = this.$store.getters.m_detailCV.data
+        this.formData.workingTime = dataRes.workingTime
+        this.formData.title = dataRes.title
+        this.formData.description = dataRes.description
+        this.formData.location = dataRes.location
+        this.formData.job = dataRes.job
+      })
+      .catch(err => console.log(err))
   },
   methods: {
     submit: function () {
-      this.$store.dispatch('CreateMemberCV', this.formData)
+      let params = {
+        id: this.$route.params.id,
+        form: this.formData
+      }
+      this.$store.dispatch('editMemberCV', params)
         .then(() => {
           this.$router.push({ name: 'profileCVIndex' })
         })

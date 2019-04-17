@@ -10,27 +10,18 @@
     </div>
     <div class="row mt-3">
       <div class="col-3 text-right">
-        <p>Địa chỉ</p>
+        <p>Mô tả công việc</p>
       </div>
       <div class="col-9">
-        <input v-model="formData.location" class="form-control" type="text" name="title" id="title">
+        <textarea v-model="formData.description" class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-3 text-right">
-        <p>Nghành nghề</p>
+        <p>Quyền lợi</p>
       </div>
       <div class="col-9">
-        <input v-model="formData.job" class="form-control" type="text" name="title" id="title">
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-3 text-right">
-        <p>Kinh nghiệm làm việc</p>
-      </div>
-      <div class="col-9">
-        <textarea v-model="formData.description" class="form-control" name="description" id="description" cols="30"
-                  rows="10"></textarea>
+        <textarea v-model="formData.benefit" class="form-control" name="" id="" cols="30" rows="10"></textarea>
       </div>
     </div>
     <div class="row mt-3">
@@ -48,9 +39,17 @@
     </div>
     <div class="row mt-3">
       <div class="col-3 text-right">
+        <p>Mức lương</p>
       </div>
       <div class="col-9">
-        <button class="btn btn-primary" @click="submit">Tạo mới</button>
+        <input v-model="formData.salary" class="form-control" type="text" name="" id="">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3 text-right">
+      </div>
+      <div class="col-9">
+        <button class="btn btn-primary" @click="submit">Cập nhật</button>
       </div>
     </div>
   </div>
@@ -58,25 +57,40 @@
 
 <script>
 export default {
-  name: 'profileCreateMemberCV',
+  name: 'profileEditEnterpriseCV',
   data: function () {
     return {
       formData: {
         title: '',
         description: '',
         user_id: '',
-        location: '',
-        job: '',
+        benefit: '',
+        salary: '',
         workingTime: ''
       }
     }
   },
   mounted () {
     this.formData.user_id = localStorage.getItem('user_id')
+    this.$store.dispatch('e_DetailCV', this.$route.params.id)
+      .then(() => {
+        console.log(this.$store.getters.e_detailCV.data)
+        let dataRes = this.$store.getters.e_detailCV.data
+        this.formData.workingTime = dataRes.workingTime
+        this.formData.title = dataRes.title
+        this.formData.description = dataRes.description
+        this.formData.benefit = dataRes.benefit
+        this.formData.salary = dataRes.salary
+      })
+      .catch(err => console.log(err))
   },
   methods: {
     submit: function () {
-      this.$store.dispatch('CreateMemberCV', this.formData)
+      let params = {
+        id: this.$route.params.id,
+        form: this.formData
+      }
+      this.$store.dispatch('updateEnterpriseCV', params)
         .then(() => {
           this.$router.push({ name: 'profileCVIndex' })
         })

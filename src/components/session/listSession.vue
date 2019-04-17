@@ -10,7 +10,6 @@
         <table class="table table-hover">
           <tbody>
             <tr v-for="item in listSession" :key="item.id">
-              <td width="8%"><img src="@/assets/img/avatar.png" alt=""></td>
               <td>
                 <router-link :to="{name: 'sessionDetail', params: {id:item.id}}">{{item.title}}</router-link>
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
