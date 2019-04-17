@@ -35,22 +35,22 @@ let router = new Router({
       component: () => import('./components/profile/login.vue')
     },
     {
-      path: '/nguoi-tim-viec',
+      path: '/viec-tim-nguoi',
       name: 'enterpriseListCV',
       component: () => import('./components/frontend/enterpriseListCV.vue')
     },
     {
-      path: '/nguoi-tim-viec/:id',
+      path: '/viec-tim-nguoi/:id',
       name: 'enterpriseCVDetail',
       component: () => import('./components/frontend/enterpriseCVDetail.vue')
     },
     {
-      path: '/viec-tim-nguoi',
+      path: '/nguoi-tim-viec',
       name: 'memberListCV',
       component: () => import('./components/frontend/memberListCV')
     },
     {
-      path: '/viec-tim-nguoi/:id',
+      path: '/nguoi-tim-viec/:id',
       name: 'memberCVDetail',
       component: () => import('./components/frontend/memberCVDetail')
     },

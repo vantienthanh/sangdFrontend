@@ -56,12 +56,12 @@
             <div class="row">
               <div class="col-12 text-center">
                 <h3>Avatar</h3>
-                <img v-if="avatar !== null" :src="avatar" alt="" width="150px">
+                <img v-if="avatar !== ''" :src="avatar" alt="" width="150px">
                 <img v-else src="@/assets/img/noimageavailable.png" alt="" width="150px">
               </div>
             </div>
             <div class="row">
-              <div v-if="cv !== null" class="col-12 text-center">
+              <div v-if="cv !== ''" class="col-12 text-center">
                 <h3>Download CV</h3>
                 <a target="_blank" :href="cv"><img src="@/assets/img/cv.png" alt="" width="150px"></a>
               </div>
