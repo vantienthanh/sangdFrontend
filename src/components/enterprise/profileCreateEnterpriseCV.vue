@@ -78,7 +78,9 @@ export default {
       console.log(this.formData)
       this.$store.dispatch('createEnterpriseCV', this.formData)
         .then(() => {
-          this.$toasted.show('hello billo')
+          this.$toasted.global.my_app_error({
+            message : 'Not Authorized to Access'
+          })
           this.$router.push({ name: 'profileCVIndex' })
         })
         .catch(err => console.log(err))

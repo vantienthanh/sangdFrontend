@@ -48,12 +48,12 @@ export default {
   mounted () {
     this.formData.user_id = localStorage.getItem('user_id')
     this.formData.enterpriseSession_id = this.$route.params.id
-    // this.$store.dispatch('sessionDetail', this.$route.params.id)
-    //   .then(() => {
-    //     this.dataDetail = this.getDataDetail
-    //     console.log(this.dataDetail)
-    //   })
-    //   .catch(err => console.log(err))
+    this.$store.dispatch('tableGetEnterpriseCV', this.$route.params.id)
+      .then(() => {
+        this.dataDetail = this.$store.getters.tableEnterpriseCV.data
+        console.log(this.dataDetail)
+      })
+      .catch(err => console.log(err))
   },
   methods: {
     apply: function () {

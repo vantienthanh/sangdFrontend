@@ -26,7 +26,7 @@
                     <div class="col-12">
                         <div class="session-status">
                             <!--<h1>Phiên giao dịch đã kết thúc</h1>-->
-                            <a v-if="sessionInfo.userStatus === null" data-toggle="modal" data-target="#exampleModal" href="#">Tham gia</a>
+                            <a v-if="sessionInfo.userStatus === null" data-toggle="modal" data-target="#exampleModal" href="#" @click="join">Tham gia</a>
                             <p v-else-if="sessionInfo.userStatus === 'waitting'" href="#">Chờ xét duyệt</p>
                             <a v-else href="#">Không thể tham gia</a>
                         </div>
@@ -66,7 +66,13 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p v-if="roleUser === 'enterprise'">Xác nhận tham gia sàn giao dịch</p>
+                      <div v-if="roleUser === 'enterprise'" class="text-center">
+                        <h3 >Xác nhận tham gia sàn giao dịch?</h3>
+                        <p>Chọn hồ sơ tuyển dụng</p>
+                        <select class="form-control mt-2" v-model="selectedCV" name="" id="">
+                          <option v-for="item in listEnterpriseCV" :key="item.id" :value="item.id">{{item.title}}</option>
+                        </select>
+                      </div>
                         <p v-else>Tài khoản của bạn không phải là tài khoản doanh nghiệp </p>
                     </div>
                     <div class="modal-footer">
@@ -92,7 +98,9 @@ export default {
       infoData: {
         user_id: null,
         id: null
-      }
+      },
+      listEnterpriseCV: {},
+      selectedCV: 0
     }
   },
   mounted () {
@@ -129,11 +137,21 @@ export default {
       let data = {
         user_id: localStorage.getItem('user_id'),
         session_id: this.$route.params.id,
+        jobNews_id: this.selectedCV,
         status: 'waitting'
       }
       this.$store.dispatch('e_joinSession', data)
         .then(() => {
-          console.log('done')
+          // eslint-disable-next-line
+          $('#exampleModal').trigger('click')
+        })
+        .catch(err => console.log(err))
+    },
+    join: function () {
+      this.$store.dispatch('profile_getListEnterpriseCVByUser', localStorage.getItem('user_id'))
+        .then(() => {
+          this.listEnterpriseCV = this.$store.getters.listEnterpriseByUser.data
+          console.log(this.listEnterpriseCV, '111')
         })
         .catch(err => console.log(err))
     }

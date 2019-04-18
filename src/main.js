@@ -11,7 +11,10 @@ import Toasted from 'vue-toasted'
 
 Vue.use(Toasted)
 Vue.config.productionTip = false
-
+let options = {
+  duration: 5000
+}
+Vue.toasted.register('my_app_error', options)
 window.$ = window.jQuery = require('jquery')
 
 new Vue({

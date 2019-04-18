@@ -4,13 +4,15 @@ import http from '../../utils/http.js'
 const state = {
   listSession: {},
   sessionDetail: {},
-  sessionInfo: {}
+  sessionInfo: {},
+  tableEnterpriseCV: {}
 }
 
 const getters = {
   listSession: state => state.listSession,
   sessionDetail: state => state.sessionDetail,
-  sessionInfo: state => state.sessionInfo
+  sessionInfo: state => state.sessionInfo,
+  tableEnterpriseCV: state => state.tableEnterpriseCV
 }
 
 const actions = {
@@ -76,6 +78,19 @@ const actions = {
           reject(err)
         })
     })
+  },
+  tableGetEnterpriseCV  ({ commit }, id) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/enterprise/get-cv-by-table-id/' + id
+      http.axiosCus.get(urlData)
+        .then((response) => {
+          commit(types.TABLE_ENTERPRISE_CV, response.data)
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
   }
 }
 
@@ -88,6 +103,9 @@ const mutations = {
   },
   [types.SESSION_INFO] (state, data) {
     state.sessionInfo = data
+  },
+  [types.TABLE_ENTERPRISE_CV] (state, data) {
+    state.tableEnterpriseCV = data
   }
 }
 
