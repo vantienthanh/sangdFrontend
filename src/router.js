@@ -98,7 +98,18 @@ let router = new Router({
           path: '/profile/cv/enterprise/:id/edit',
           name: 'profileEditEnterpriseCV',
           component: () => import('./components/enterprise/profileEditEnterpriseCV')
+        },
+        {
+          path: '/profile/danh-sach-ung-vien/:id',
+          name: 'profileListMemberJoin',
+          component: () => import('./components/enterprise/profileListMemberJoinTable')
+        },
+        {
+          path: '/profile/danh-sach-da-tham-gia/:id',
+          name: 'profileListTableJoined',
+          component: () => import('./components/member/profileListTableJoined')
         }
+
       ]
     },
     {

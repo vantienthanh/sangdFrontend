@@ -25,10 +25,9 @@
             <div class="list-dotted my-1"></div>
             <div class="row">
               <div class="col-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </div>
               <div class="col-4 ">
-                <p>Lorem ipsum dolor.</p>
+                <p><i class="fas fa-donate"></i>  {{item.salary}}</p>
               </div>
             </div>
           </div>

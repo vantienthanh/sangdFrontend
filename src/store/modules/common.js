@@ -38,13 +38,14 @@ const actions = {
     }
     commit(types.LOGIN_STATUS, false)
   },
-  register ({ commit }, params) {
+  register1 ({ commit }, params) {
     return new Promise(function (resolve, reject) {
       let urlData = 'register'
       http.axiosCus.post(urlData, params)
         .then((response) => {
           localStorage.setItem('token', response.data.data.token)
           localStorage.setItem('username', response.data.data.user.username)
+          localStorage.setItem('user_id', response.data.data.user.id)
           localStorage.setItem('role', response.data.data.user.role)
           commit(types.LOGIN_STATUS, true)
           commit(types.LOGIN, response.data)

@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     submit: function () {
-      this.$store.dispatch('register', this.registerFrom)
+      this.$store.dispatch('register1', this.registerFrom)
         .then(() => {
           this.$router.push({ 'name': 'home' })
         })

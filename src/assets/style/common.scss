@@ -17,8 +17,14 @@
  .line {
    border-bottom: 1px solid #d2ddef;
  }
+ .menu--bgrnd {
+   background-color: #0091ce;
+   a {
+     color: #ffffff !important;
+   }
+ }
 .header__right {
-  .login:hover {
+  .login_header:hover {
     .header__logout-panel {
       display: block;
     }
@@ -30,13 +36,7 @@
     margin: 0;
     padding: 0;
     font-size: 14px;
-    color: gray;
-  }
-  .header__name{
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    color: gray;
+    color: #fff;
   }
   .header__logout-panel {
     position: absolute;
@@ -44,5 +44,8 @@
     z-index: 1;
     background-color: #f8f9fa;
     display: none;
+    a {
+      color: #000 !important;
+    }
   }
 }

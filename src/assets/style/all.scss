@@ -1,0 +1,88 @@
+body {
+  background-color: #f6f6f6 !important;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.box-bg, .login {
+  background-color: #fff;
+}
+
+.login:hover, .login a:hover {
+  background-color: #23527c;
+  text-decoration: none;
+}
+
+#bc-bg {
+  background: none;
+}
+
+.img-size {
+  width: 50px;
+  height: 50px;
+}
+
+.job-border, .img-border {
+  border: 1px solid #f1f1f1;
+}
+
+.job-border:hover {
+  box-shadow: 2px 2px 2px #f1f1f1;
+}
+
+.comp-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.btn-send, .final-total {
+  background-color: #fc205c;
+}
+
+.hotline {
+  background-color: #499cd6;
+}
+
+.phone {
+  color: #499cd6;
+  font-weight: 500;
+}
+
+.login:hover, .login a:hover,
+.footer, .hotline,
+.btn-send, .final-total {
+  color: #ffffff;
+}
+
+.footer, .btn-search:hover {
+  background-color: #0080b7;
+}
+
+.scroll-bar {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+/* -----------TUYENDUNG.HTML-------------- */
+select option[disabled]:first-child {
+  display: none;
+}
+
+.el-tag--gray {
+  background-color: #e4e8f1;
+  border-color: #e4e8f1;
+  color: #48576a;
+}
+
+.el-tag {
+  height: 24px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}

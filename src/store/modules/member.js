@@ -3,12 +3,14 @@ import http from '../../utils/http.js'
 
 const state = {
   // enterprise_getListCV: {}
-  userInfo: {}
+  userInfo: {},
+  listTableJoined: {}
 }
 
 const getters = {
   // enterprise_getListCV: state => state.enterprise_getListCV
-  userInfo: state => state.userInfo
+  userInfo: state => state.userInfo,
+  listTableJoined: state => state.listTableJoined
 }
 
 const actions = {
@@ -72,6 +74,19 @@ const actions = {
           reject(err)
         })
     })
+  },
+  listTableJoined ({ commit }, id) {
+    return new Promise(function (resolve, reject) {
+      let urlData = 'member/join-session/' + id
+      http.axiosCus.get(urlData)
+        .then((response) => {
+          commit(types.LIST_TABLE_MEMBER_JOINED, response.data)
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
   }
 }
 
@@ -81,6 +96,9 @@ const mutations = {
   // }
   [types.USER_INFO] (state, data) {
     state.userInfo = data
+  },
+  [types.LIST_TABLE_MEMBER_JOINED] (state, data) {
+    state.listTableJoined = data
   }
 }
 

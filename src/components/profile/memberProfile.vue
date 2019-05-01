@@ -15,12 +15,13 @@
                 <p>username</p>
               </div>
               <div class="col-9">
-                <p class="form-control">thanhvt</p>
+                <p class="form-control">{{username}}</p>
               </div>
             </div>
             <div class="row mt-3">
               <div class="col-3">
-                <p>Họ tên</p>
+                <p v-if="role === 'member'">Họ tên</p>
+                <p v-else>Tên doanh nghiệp</p>
               </div>
               <div class="col-9">
                 <input class="form-control" type="text" name="full_name" id="full_name" v-model="name">
@@ -85,10 +86,14 @@ export default {
       email: '',
       user_id: '',
       cv: '',
-      avatar: ''
+      avatar: '',
+      username: '',
+      role: ''
     }
   },
   mounted () {
+    this.role = localStorage.getItem('role')
+    this.username = localStorage.getItem('username')
     this.user_id = localStorage.getItem('user_id')
     this.$store.dispatch('memberInfo', localStorage.getItem('user_id'))
       .then(() => {

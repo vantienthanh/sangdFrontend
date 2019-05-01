@@ -12,11 +12,10 @@
             <tr v-for="item in listSession" :key="item.id">
               <td>
                 <router-link :to="{name: 'sessionDetail', params: {id:item.id}}">{{item.title}}</router-link>
-                <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </td>
-              <td><i class="fas fa-dollar-sign"></i> 1000$</td>
-              <td><i class="far fa-clock"></i>{{item.startTime}}</td>
-              <td><i class="fas fa-map-marker-alt"></i> Ha Noi</td>
+              <!--<td><i class="fas fa-dollar-sign"></i> 1000$</td>-->
+              <td><i class="far fa-clock"></i>{{item.startTime}} - {{item.endTime}}</td>
+              <td><i class="fas fa-map-marker-alt"></i> {{item.location}}</td>
             </tr>
           </tbody>
         </table>

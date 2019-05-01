@@ -4,10 +4,12 @@
       <div class="col-12">
         <div class="row">
           <div class="col-6">
-            <h2 class="heading-title">Lorem ipsum dolor sit amet.</h2>
+            <h2 v-if="dataDetail.companyName !== null" class="heading-title">{{dataDetail.companyName}}</h2>
           </div>
           <div class="col-6">
-            <span>Quay lại</span>
+            <div class="text-right">
+              <button class="btn">Quay lại</button>
+            </div>
           </div>
         </div>
         <div class="heading-line mb-4"></div>
@@ -74,12 +76,12 @@
             </div>
           </div>
           <div class="col-9 left-column border">
-            <h2>{{dataDetail.title}}</h2>
-            <div class="dotted-line"></div>
-            <div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque error expedita id nulla quia quos!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nesciunt!</p>
-            </div>
+            <h2 class="text-center">{{dataDetail.title}}</h2>
+            <!--<div class="dotted-line"></div>-->
+            <!--<div>-->
+              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque error expedita id nulla quia quos!</p>-->
+              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nesciunt!</p>-->
+            <!--</div>-->
             <div class="dotted-line"></div>
             <h2>Mô tả công việc</h2>
             <div class="dotted-line"></div>
