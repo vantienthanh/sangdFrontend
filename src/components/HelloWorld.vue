@@ -2,45 +2,47 @@
   <div class="container">
     <div class="row"> <!-- tìm kiếm -->
       <div class="col-12">
-        <div class="row  footer p-3">
-          <div class="col-md-5">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+        <div class="footer p-3">
+          <div class="row ">
+            <div class="col-md-5">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="tiêu đề công việc, vị trí, địa điểm làm việc,..."
+                       id="usr" name="username">
               </div>
-              <input type="text" class="form-control" placeholder="tiêu đề công việc, vị trí, địa điểm làm việc,..."
-                     id="usr" name="username">
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-hammer"></i></label>
+            <div class="col-md-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-hammer"></i></label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Tất cả ngành nghề</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
               </div>
-              <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Tất cả ngành nghề</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-compass"></i></label>
+            <div class="col-md-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-compass"></i></label>
+                </div>
+                <select class="custom-select" id="">
+                  <option selected>Tất cả địa điểm</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
               </div>
-              <select class="custom-select" id="">
-                <option selected>Tất cả địa điểm</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
             </div>
-          </div>
-          <div class="col-md-1">
-            <button class="btn px-4 btn-outline-primary btn-search" style="background-color: #fff;"><i
-                    class="fas fa-search"></i></button>
+            <div class="col-md-1">
+              <button class="btn px-4 btn-outline-primary btn-search" style="background-color: #fff;"><i
+                      class="fas fa-search"></i></button>
+            </div>
           </div>
         </div>
       </div>
@@ -73,7 +75,7 @@
             <div>
               <i class="fas fa-lock d-block fa-4x"></i>
             </div>
-            <div class="text-uppercase">đăng nhập</div>
+            <p class="text-uppercase">đăng nhập</p>
           </a>
         </div>
       </div>
@@ -81,7 +83,7 @@
         <div class="login py-3 px-5 font-weight-bold">
           <a href="#" class="d-block">
             <div>
-              <i class="fas fa-lock d-block fa-4x"></i>
+              <i class="fas fa-sign-in-alt fa-4x"></i>
             </div>
             <div class="text-uppercase">đăng ký</div>
           </a>
@@ -99,66 +101,71 @@
         <div class="login py-4 px-5">
           <a href="#">
             <div>
-              <i class="fas fa-lock fa-4x"></i>
+              <i class="far fa-clipboard fa-4x"></i>
             </div>
             <div class="text-uppercase font-weight-bold">đăng tuyển miễn phí</div>
           </a>
         </div>
       </div>
     </div>
-    <div class="row box-bg mt-3 pt-3"> <!--việc làm cần gấp-->
-      <div class="col-md-12"><h5><i class="fas fa-briefcase"></i> VIỆC LÀM TUYỂN GẤP</h5></div>
+    <div class="row">
+      <div class="col-md-12"> <!--việc làm cần gấp-->
+        <div class="box-bg mt-3 pt-3"><h5><i class="fas fa-briefcase"></i> VIỆC LÀM TUYỂN GẤP</h5></div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="job-border p-1 my-2 clearfix">
+              <a href="#">
+                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-border p-1 my-2 clearfix">
+              <a href="#">
+                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-border p-1 my-2 clearfix">
+              <a href="#">
+                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-border p-1 my-2 clearfix">
+              <a href="#">
+                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-border p-1 my-2 clearfix">
+              <a href="#">
+                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-border p-1 my-2 clearfix">
+              <a href="#">
+                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row box-bg"><!--việc làm cần gấp-->
+
+      </div><!-- ends việc làm cần gấp-->
     </div>
-    <div class="row box-bg"><!--việc làm cần gấp-->
-      <div class="col-md-4">
-        <div class="job-border p-1 my-2 clearfix">
-          <a href="#">
-            <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-            <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="job-border p-1 my-2 clearfix">
-          <a href="#">
-            <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-            <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="job-border p-1 my-2 clearfix">
-          <a href="#">
-            <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-            <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="job-border p-1 my-2 clearfix">
-          <a href="#">
-            <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-            <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="job-border p-1 my-2 clearfix">
-          <a href="#">
-            <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-            <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="job-border p-1 my-2 clearfix">
-          <a href="#">
-            <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-            <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-          </a>
-        </div>
-      </div>
-    </div><!-- ends việc làm cần gấp-->
     <div class="row mt-3">
       <div class="col-md-8">
         <div class="row pt-3 pl-2 box-bg">
@@ -308,24 +315,6 @@
         <h5 class="mt-4 pb-3">TOÀN QUỐC: (024) 710 88688</h5>
       </div>
     </div> <!-- END HOTLINE CHO ỨNG VIÊN-->
-    <div class="row text-center mt-3 p-3 final-total"> <!--TỔNG KẾT THÔNG TIN-->
-      <div class="col-md-3">
-        <h4>4,071,365</h4>
-        <div>Ứng viên</div>
-      </div>
-      <div class="col-md-3">
-        <h4>4,071,365</h4>
-        <div>Ứng viên</div>
-      </div>
-      <div class="col-md-3">
-        <h4>4,071,365</h4>
-        <div>Ứng viên</div>
-      </div>
-      <div class="col-md-3">
-        <h4>4,071,365</h4>
-        <div>Ứng viên</div>
-      </div>
-    </div><!-- END TỔNG KẾT THÔNG TIN-->
   </div>
 </template>
 
