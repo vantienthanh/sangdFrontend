@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid sessionTable">
+    <div class="container sessionTable">
       <div class="row my-3 py-3 row-background">
         <div class="col-12">
           <div class="row mb-3">
@@ -26,7 +26,7 @@
               <p>{{dataDetail.created_at}}</p>
             </div>
             <div class="col-4">
-              <button class="btn btn-danger" @click="apply">Tham gia </button>
+              <button v-if="user_role === 'member'" class="btn btn-danger" @click="apply">Nộp CV</button>
             </div>
           </div>
         </div>
@@ -56,6 +56,7 @@ export default {
   data: function () {
     return {
       dataDetail: {},
+      user_role: '',
       formData: {
         user_id: null,
         enterpriseSession_id: null
@@ -63,6 +64,7 @@ export default {
     }
   },
   mounted () {
+    this.user_role = localStorage.getItem('role')
     this.formData.user_id = localStorage.getItem('user_id')
     this.formData.enterpriseSession_id = this.$route.params.id
     this.$store.dispatch('tableGetEnterpriseCV', this.$route.params.id)

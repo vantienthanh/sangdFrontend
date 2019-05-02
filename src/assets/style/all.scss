@@ -14,10 +14,13 @@ li {
   background-color: #fff;
 }
 
-.login:hover, .login a:hover {
+.login:hover{
   background-color: #1790d4;
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;
+  a {
+    color: #fff;
+  }
 }
 
 #bc-bg {

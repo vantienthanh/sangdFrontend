@@ -9,7 +9,7 @@
             </div>
             <div class="col-4">
               <router-link v-if="role ==='member'" :to="{name:'profileListTableJoined', params: {id:user_id}}">Danh sách các bàn đã tham gia trong sàn giao dịch</router-link>
-              <router-link v-else :to="{name:'profileListMemberJoin'}">Danh sách ứng viên tham gia bàn giao dịch</router-link>
+              <router-link v-else :to="{name:'profileListSessionJoined', params: {id:user_id}}">Danh sách ứng viên tham gia bàn giao dịch</router-link>
             </div>
         </div>
         <div class="row">

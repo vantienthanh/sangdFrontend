@@ -27,8 +27,8 @@
                         <div class="session-status">
                             <!--<h1>Phiên giao dịch đã kết thúc</h1>-->
                             <a v-if="sessionInfo.userStatus === null" data-toggle="modal" data-target="#exampleModal" href="#" @click="join">Tham gia</a>
-                            <p v-else-if="sessionInfo.userStatus === 'waitting'" href="#">Chờ xét duyệt</p>
-                            <a v-else href="#">Không thể tham gia</a>
+                            <p v-else-if="sessionInfo.userStatus === '0'" href="#">Chờ xét duyệt</p>
+                            <a v-else-if="sessionInfo.userStatus === '2'" href="#">Không được tham gia</a>
                         </div>
                     </div>
                 </div>

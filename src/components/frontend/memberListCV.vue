@@ -13,7 +13,7 @@
             <td v-if="item.avatar === null" width="8%"> <img  src="@/assets/img/noimageavailable.png" alt="" width="150px"></td>
             <td v-else width="8%"><img  :src="item.avatar" alt=""></td>
             <td width="60%">
-              <router-link :to="{name: 'sessionDetail', params: {id:item.id}}">{{item.title}}</router-link>
+              <router-link :to="{name: 'memberCVDetail', params: {id:item.id}}">{{item.title}}</router-link>
               <p>Lorem ipsum dolor sit amet, consectetur.</p>
             </td>
             <td><i class="far fa-clock"></i>{{item.startTime}}</td>

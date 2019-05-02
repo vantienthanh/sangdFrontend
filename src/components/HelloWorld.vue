@@ -9,7 +9,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="tiêu đề công việc, vị trí, địa điểm làm việc,..."
+                <input type="text" class="form-control" placeholder="Tiêu đề tuyển dụng"
                        id="usr" name="username">
               </div>
             </div>
@@ -70,8 +70,8 @@
     </div>
     <div class="row"> <!-- đăng ký đăng nhập -->
       <div class="col-md-2 text-center">
-        <div class="login py-3 px-5 font-weight-bold">
-          <a href="#" class="d-block">
+        <div class="login py-3 font-weight-bold">
+          <a href="#" class="">
             <div>
               <i class="fas fa-lock d-block fa-4x"></i>
             </div>
@@ -80,7 +80,7 @@
         </div>
       </div>
       <div class="col-md-2 text-center">
-        <div class="login py-3 px-5 font-weight-bold">
+        <div class="login py-3 font-weight-bold">
           <a href="#" class="d-block">
             <div>
               <i class="fas fa-sign-in-alt fa-4x"></i>
@@ -90,7 +90,7 @@
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <div class="login py-4 px-5">
+        <div class="login py-3 px-5">
           <a href="#">
             <div><i class="far fa-check-circle fa-4x"></i></div>
             <div class="text-uppercase font-weight-bold">hoàn thiện hồ sơ</div>
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <div class="login py-4 px-5">
+        <div class="login py-3 px-5">
           <a href="#">
             <div>
               <i class="far fa-clipboard fa-4x"></i>
@@ -110,131 +110,138 @@
     </div>
     <div class="row">
       <div class="col-md-12"> <!--việc làm cần gấp-->
-        <div class="box-bg mt-3 pt-3"><h5><i class="fas fa-briefcase"></i> VIỆC LÀM TUYỂN GẤP</h5></div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+        <div class="box-bg mt-3 p-3"><h5 class="m-0 p-0"><i class="fas fa-briefcase"></i> VIỆC LÀM TUYỂN GẤP</h5></div>
+        <div class="box-bg px-3">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-4">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-4">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-4">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-4">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-4">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row box-bg"><!--việc làm cần gấp-->
-
-      </div><!-- ends việc làm cần gấp-->
     </div>
     <div class="row mt-3">
       <div class="col-md-8">
-        <div class="row pt-3 pl-2 box-bg">
-          <div class="col-md-12">
-            <h5><i class="fas fa-briefcase"></i> VIỆC LÀM HẤP DẪN</h5>
-            <hr>
+        <div class="pl-3 box-bg pt-3">
+          <div class="row  ">
+            <div class="col-md-12">
+              <h5><i class="fas fa-briefcase"></i> VIỆC LÀM HẤP DẪN</h5>
+              <hr>
+            </div>
           </div>
         </div>
-        <div class="row box-bg scroll-bar">
-          <div class="col-md-6">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+        <div class="box-bg scroll-bar pl-3">
+          <div class="row ">
+            <div class="col-md-6">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-6">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-6">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+            <div class="col-md-6">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
         <!--VIỆC LÀM LƯƠNG CAO-->
-        <div class="row pt-3 pl-2 mt-3 box-bg">
-          <div class="col-md-12">
-            <h5><i class="fas fa-briefcase"></i> VIỆC LÀM LƯƠNG CAO</h5>
-            <hr>
+        <div class=" pt-3 pl-3 mt-3 box-bg">
+          <div class="row">
+            <div class="col-md-12">
+              <h5><i class="fas fa-briefcase"></i> VIỆC LÀM LƯƠNG CAO</h5>
+              <hr>
+            </div>
           </div>
         </div>
-        <div class="row box-bg scroll-bar">
-          <div class="col-12">
-            <div class="job-border p-1 my-2 clearfix">
-              <a href="#">
-                <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
-                <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
-              </a>
+        <div class="box-bg scroll-bar pl-3">
+          <div class="row">
+            <div class="col-12">
+              <div class="job-border p-1 my-2 clearfix">
+                <a href="#">
+                  <div class="float-left"><img class="img-fluid img-size" src="img/icon.jpg" alt=""></div>
+                  <div class="float-right">Lorem ipsum dolor sit amet, consectetur.</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4"> <!--danh sách icon nhà tuyển dụng-->
         <div class="box-bg">
-          <div class="row pt-3 pl-2">
+          <div class="row pt-3 px-3">
             <div class="col-md-12">
               <h5><i class="fas fa-building"></i> NHÀ TUYỂN DỤNG HÀNG ĐẦU</h5>
               <hr>
             </div>
           </div>
-          <div class="row p-1">
+          <div class="row px-3 pb-3">
             <div class="col-md-4 mb-1">
               <a href=""><img src="img/nha-tuyen-dung-1.jpeg" alt=""
                               class="img-fluid p-1 comp-icon img-border"></a>
@@ -288,33 +295,39 @@
         </div>
       </div>
     </div>
-    <div class="row mt-3 box-bg"> <!--HOTLINE CHO NHÀ TUYỂN DỤNG-->
-      <div class="col-12 text-center">
-        <div class="font-weight-bold text-uppercase hotline py-3">hotline tư vấn dành cho nhà tuyển dụng</div>
-        <h5 class="mt-4 py-3">KHU VỰC MIỀN BẮC HOTLINE (024) 710 88688</h5>
+    <div class="mt-3 box-bg">
+      <div class="row"> <!--HOTLINE CHO NHÀ TUYỂN DỤNG-->
+        <div class="col-12 text-center">
+          <div class="font-weight-bold text-uppercase hotline py-3">Hotline tư vấn dành cho nhà tuyển dụng</div>
+          <h5 class="mt-4 py-3">KHU VỰC MIỀN BẮC HOTLINE (0123) 456 78910</h5>
+        </div>
       </div>
     </div>
-    <div class="row text-center box-bg pb-4">
-      <div class="col-md-3">
-        <div><span class="phone">013344657</span> Mrs Hương</div>
-      </div>
-      <div class="col-md-3">
-        <div><span class="phone">013344657</span> Mrs Hương</div>
-      </div>
-      <div class="col-md-3">
-        <div><span class="phone">013344657</span> Mrs Hương</div>
-      </div>
-      <div class="col-md-3">
-        <div><span class="phone">013344657</span> Mrs Hương</div>
-      </div>
-      <hr>
-    </div> <!--END HOTLINE CHO NHÀ TUYỂN DỤNG-->
-    <div class="row mt-3"> <!--HOTLINE CHO ỨNG VIÊN-->
-      <div class="col-12 text-center box-bg">
-        <div class="font-weight-bold text-uppercase hotline py-3">hotline tư vấn dành cho ứng viên</div>
-        <h5 class="mt-4 pb-3">TOÀN QUỐC: (024) 710 88688</h5>
-      </div>
-    </div> <!-- END HOTLINE CHO ỨNG VIÊN-->
+    <div class="box-bg pb-4">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div><span class="phone">013344657</span> Mr Hưng</div>
+        </div>
+        <div class="col-md-3">
+          <div><span class="phone">013344657</span> Mr Duy</div>
+        </div>
+        <div class="col-md-3">
+          <div><span class="phone">013344657</span> Mr Thành</div>
+        </div>
+        <div class="col-md-3">
+          <div><span class="phone">013344657</span> Mr Tường</div>
+        </div>
+        <hr>
+      </div> <!--END HOTLINE CHO NHÀ TUYỂN DỤNG-->
+    </div>
+    <div class="box-bg">
+      <div class="row mt-3"> <!--HOTLINE CHO ỨNG VIÊN-->
+        <div class="col-12 text-center">
+          <div class="font-weight-bold text-uppercase hotline py-3">hotline tư vấn dành cho ứng viên</div>
+          <h5 class="mt-4 pb-3">TOÀN QUỐC: (024) 710 88688</h5>
+        </div>
+      </div> <!-- END HOTLINE CHO ỨNG VIÊN-->
+    </div>
   </div>
 </template>
 

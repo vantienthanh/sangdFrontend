@@ -1,12 +1,17 @@
 // import * as types from '../mutation-types'
 import http from '../../utils/http.js'
+import * as types from '../mutation-types'
 
 const state = {
   // enterprise_getListCV: {}
+  listSessionEJoined: {},
+  listMemberJoinedTable: {}
 }
 
 const getters = {
   // enterprise_getListCV: state => state.enterprise_getListCV
+  listSessionEJoined: state => state.listSessionEJoined,
+  listMemberJoinedTable: state => state.listMemberJoinedTable
 }
 
 const actions = {
@@ -57,13 +62,42 @@ const actions = {
           reject(err)
         })
     })
+  },
+  profile_getListSessionJoined1 ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/enterprise/get-list-session-user-joined/' + params
+      http.axiosCus.get(urlData)
+        .then((response) => {
+          commit(types.PROFILE_LIST_SESSION_JOINED, response.data)
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  },
+  profile_getListUserJoined1 ({ commit }, params) {
+    return new Promise(function (resolve, reject) {
+      let urlData = '/enterprise/get-list-user-join-table/' + params
+      http.axiosCus.get(urlData)
+        .then((response) => {
+          commit(types.PROFILE_LIST_USER_JOINED, response.data)
+          resolve(response)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
   }
 }
 
 const mutations = {
-  // [types.ENTERPRISE_GET_LIST_CV] (state, data) {
-  //   state.enterprise_getListCV = data
-  // }
+  [types.PROFILE_LIST_SESSION_JOINED] (state, data) {
+    state.listSessionEJoined = data
+  },
+  [types.PROFILE_LIST_USER_JOINED] (state, data) {
+    state.listMemberJoinedTable = data
+  }
 }
 
 export default {

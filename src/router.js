@@ -105,11 +105,15 @@ let router = new Router({
           component: () => import('./components/enterprise/profileListMemberJoinTable')
         },
         {
+          path: '/profile/danh-sach-phien-giao-dich/:id',
+          name: 'profileListSessionJoined',
+          component: () => import('./components/enterprise/profileListsessionJoined')
+        },
+        {
           path: '/profile/danh-sach-da-tham-gia/:id',
           name: 'profileListTableJoined',
           component: () => import('./components/member/profileListTableJoined')
         }
-
       ]
     },
     {
